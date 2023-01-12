@@ -1,1 +1,9 @@
+# GEN 1
 
+## SHINY HUNTING ##
+
+
+## PVP DV HUNTING ##
+
+
+## IN GAME INFO ##
