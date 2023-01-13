@@ -6,11 +6,16 @@ New versions and other emulator in progress.
 I recommend don't speed up your emulator or some scripts are going 
 to work wrong.
 
+Inside of each foder are going to be a small video 
+
 ## FISHING BOTS ##
 
 Select your rod, put cursor over "use" and run the script.
 
 ![](https://i.imgur.com/0y7aQeW.png)
+
+Inside of each fishing script are a option called OP, if you initialize 
+this local variable to 7 you are going to see the DVs of every Soft Reset Pokemon.
 
   - Autospecie_fishingbot.lua
 
