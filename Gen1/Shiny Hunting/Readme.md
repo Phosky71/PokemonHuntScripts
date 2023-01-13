@@ -10,7 +10,7 @@ Inside of each foder are going to be a small video showing how it would look exe
 
 ## FISHING BOTS ##
 
-Select your rod, put cursor over "use" and run the script.
+Select your rod, put cursor over "USE" and run the script.
 
 ![](https://i.imgur.com/0y7aQeW.png)
 
