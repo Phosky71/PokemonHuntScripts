@@ -1,6 +1,7 @@
 # SHINY HUNTING
 
 Work only with vba rr 23.6.
+New versions and other emulator in progress.
 
 I recommend don't speed up your emulator or some scripts are going 
 to work wrong.
@@ -8,6 +9,7 @@ to work wrong.
 ## FISHING BOTS ##
 
 Select your rod, put cursor over "use" and run the script.
+
 
   -
   
