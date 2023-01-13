@@ -33,6 +33,12 @@ this local variable to 7 you are going to see the DVs of every Soft Reset Pokemo
 
 ## IN GAME TRADES ##
 
+  - InGameTrade.lua
+
+  - LegoFigure11_igtbot.lua
+
+  - Zep715_igtbot.lua
+
 
 ## STATIONARY BOTS ##
 
