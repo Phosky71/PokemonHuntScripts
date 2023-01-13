@@ -7,6 +7,11 @@ to work wrong.
 
 ## FISHING BOTS ##
 
+Select your rod, put cursor over "use" and run the script.
+
+  -
+  
+  -
 
 ## GIFT BOX ##
 
