@@ -35,10 +35,13 @@ this local variable to 7 you are going to see the DVs of every Soft Reset Pokemo
 
   - InGameTrade.lua
 
-  - LegoFigure11_igtbot.lua
+  - LegoFigure11_igtbot.lua (NOT RECOMMENDED)
 
-  - Zep715_igtbot.lua
+    Run the script before last input before animation (should be at text "connect your link cable" or something like that).
 
+  - Zep715_igtbot.lua (NOT RECOMMENDED)
+    
+    Run the script before last input before animation (should be at text "connect your link cable" or something like that).
 
 ## STATIONARY BOTS ##
 
