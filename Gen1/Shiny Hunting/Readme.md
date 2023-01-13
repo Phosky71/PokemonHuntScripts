@@ -23,6 +23,10 @@ this local variable to 7 you are going to see the DVs of every Soft Reset Pokemo
     found. 
   
   - Fishbot.lua
+    
+    Edit the script for desidered species, editing index number.
+
+    Index numbers can be found here: http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_index_number_(Generation_I)
 
 ## GIFT BOX ##
 
