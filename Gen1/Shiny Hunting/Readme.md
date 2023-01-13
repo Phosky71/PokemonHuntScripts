@@ -14,7 +14,7 @@ Select your rod, put cursor over "use" and run the script.
 
   - Autospecie_fishingbot.lua
 
-    This script will select and shiny hunt automatly the first pokemon specie 
+    This script will select and shiny hunt automatically the first Pokemon specie 
     found. 
   
   - Fishbot.lua
