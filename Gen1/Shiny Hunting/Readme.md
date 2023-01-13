@@ -6,7 +6,7 @@ New versions and other emulator in progress.
 I recommend don't speed up your emulator or some scripts are going 
 to work wrong.
 
-Inside of each foder are going to be a small video 
+Inside of each foder are going to be a small video showing how it would look executed
 
 ## FISHING BOTS ##
 
