@@ -1,6 +1,6 @@
 local version = memory.readword(0x14e)
 local base_address
-local cont=0 
+local cont=1
 
 input['P1 A'] = false
 input['A'] = true
@@ -275,12 +275,8 @@ while true do
         print(string.format("spe: %d", spespc%16))
         break
     else
+		print(string.format("Not shiny... SR: %d - Atk: %d Def: %d Spe: %d Spc: %d",cont, math.floor(atkdef/16), atkdef%16, math.floor(spespc/16), spespc%16))
 		cont=cont+1
-		print(string.format("Soft Resets: %d",cont))
-        print(string.format("atk: %d", math.floor(atkdef/16)))
-        print(string.format("def: %d", atkdef%16))
-        print(string.format("spe: %d", math.floor(spespc/16)))
-        print(string.format("spe: %d", spespc%16))
 		savestate.load(state)
     end
 
