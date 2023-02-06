@@ -9,10 +9,7 @@ print("RBGY Fishing Bot by zep715")
 print("Optimised/Edited by Phosky71 | Available at https://github.com/Phosky71/PokemonHuntScripts")
 
 local target
-
---"Write 7 if you want to get no shiny IVs"
---local op = 7
-local op 
+  
 
 local a_flagbite = 0xcd3d
 
@@ -67,7 +64,6 @@ if target == nil then
 	return
 end
 
-if op == 7 then 
 
 	state = savestate.create()
 	savestate.save(state)
@@ -126,78 +122,6 @@ if op == 7 then
 						print(string.format("Def: %d", atkdef%16))
 						print(string.format("Spe: %d", math.floor(spespc/16)))
 						print(string.format("Spc: %d", spespc%16))
-						savestate.load(state)
-					end
-				end
-			else
-				--Wrong species
-				print("Wrong species")
-				savestate.load(state)
-			end
-		else
-			--Nothing bited
-			print("Nothing bited")
-			savestate.load(state)
-		end
-
-	end
-else 
-
-	state = savestate.create()
-	savestate.save(state)
-	while true do
-		emu.frameadvance()
-		savestate.save(state)
-		joypad.set(1, {A=true})
-		emu.frameadvance()
-		i=0
-		--We await the fishing results
-		while i < 200 do
-			emu.frameadvance()
-			i = i+1
-		end
-		fished = memory.readbyte(a_flagbite)
-		if fished == 0x2 then
-			print("You're fishing where there aren't pokemon")
-			break
-		elseif fished == 0x1 then
-			--Caught something, let's see if it's the species we're looking for
-			if memory.readbyte(a_fished_species) == target then
-				savestate.save(state)
-				print("Species found, now searching for ivs")
-				i = 0;
-				--We wait for the dialogue to end
-				while i<210 do
-					joypad.set(1, {A=true})
-					emu.frameadvance()
-					i= i+1
-				end
-				while true do
-					emu.frameadvance()
-					savestate.save(state)
-					atkdef = 0
-					spespc = 0
-					while memory.readbyte(0xc027)~=0xf0 do
-
-						joypad.set(1, {A=true})
-						emu.frameadvance()
-						atkdef = memory.readbyte(ivs_addr)
-						spespc = memory.readbyte(ivs_addr+1)
-					end
-					atkdef = memory.readbyte(ivs_addr)
-					spespc = memory.readbyte(ivs_addr+1)
-					print(atkdef)
-					print(spespc)
-					if shiny(atkdef,spespc) then
-						print("Shiny!!! Script stopped.")
-						print(string.format("Atk: %d", math.floor(atkdef/16)))
-						print(string.format("Def: %d", atkdef%16))
-						print(string.format("Spe: %d", math.floor(spespc/16)))
-						print(string.format("Spc: %d", spespc%16))
-						return
-					else
-						cont=cont+1
-						print(string.format("Wrong ivs. Soft Resets: %d", cont))
 						savestate.load(state)
 					end
 				end
