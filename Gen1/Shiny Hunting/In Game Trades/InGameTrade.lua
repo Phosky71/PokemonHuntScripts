@@ -267,7 +267,7 @@ while true do
 
 
 	
-	if shiny(atkdef,spespc) then
+    if shiny(atkdef,spespc) then
         print("Shiny!!! Script stopped.")
         print(string.format("atk: %d", math.floor(atkdef/16)))
         print(string.format("def: %d", atkdef%16))
@@ -275,9 +275,9 @@ while true do
         print(string.format("spe: %d", spespc%16))
         break
     else
-		print(string.format("Not shiny... SR: %d - Atk: %d Def: %d Spe: %d Spc: %d",cont, math.floor(atkdef/16), atkdef%16, math.floor(spespc/16), spespc%16))
-		cont=cont+1
-		savestate.load(state)
+	print(string.format("Not shiny... SR: %d - Atk: %d Def: %d Spe: %d Spc: %d",cont, math.floor(atkdef/16), atkdef%16, math.floor(spespc/16), spespc%16))
+	cont=cont+1
+	savestate.load(state)
     end
 
 	
