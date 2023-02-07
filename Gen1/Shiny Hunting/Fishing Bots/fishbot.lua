@@ -107,7 +107,8 @@ while true do
                 atkdef = memory.readbyte(ivs_addr)
                 spespc = memory.readbyte(ivs_addr + 1)
                 if shiny(atkdef, spespc) then
-                    print("Shiny!!! Script stopped.")
+                    cont = cont + 1
+                    print(string.format("Shiny found!!! Script stopped. SRs: %d ",cont)
                     print(string.format("Atk: %d", math.floor(atkdef / 16)))
                     print(string.format("Def: %d", atkdef % 16))
                     print(string.format("Spe: %d", math.floor(spespc / 16)))
@@ -115,7 +116,7 @@ while true do
                     return
                 else
                     cont = cont + 1
-                    print(string.format("Not shiny... SR: %d - Atk: %d Def: %d Spe: %d Spc: %d", cont, math.floor(atkdef / 16), atkdef % 16, math.floor(spespc / 16), spespc % 16))
+                    print(string.format("Not shiny... SRs: %d - Atk: %d Def: %d Spe: %d Spc: %d", cont, math.floor(atkdef / 16), atkdef % 16, math.floor(spespc / 16), spespc % 16))
                     savestate.load(state)
                 end
             end
