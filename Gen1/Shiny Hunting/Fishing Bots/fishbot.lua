@@ -15,6 +15,9 @@ local a_flagbite = 0xcd3d
 local a_fished_species
 local ivs_addr
 local version = memory.readword(0x14e)
+
+local cont = 0
+
 if version == 0xc1a2 or version == 0x36dc or version == 0xd5dd or version == 0x299c then
     print("RBGY JAP detected")
     a_fished_species = 0xd036
@@ -40,8 +43,6 @@ else
     print("Script stopped")
     return
 end
-
-local cont = 0
 
 local atkdef
 local spespc
@@ -108,7 +109,7 @@ while true do
                 spespc = memory.readbyte(ivs_addr + 1)
                 if shiny(atkdef, spespc) then
                     cont = cont + 1
-                    print(string.format("Shiny found!!! Script stopped. SRs: %d ",cont)
+					print(string.format("Shiny found!!! Script stopped. SRs: %d ",cont))
                     print(string.format("Atk: %d", math.floor(atkdef / 16)))
                     print(string.format("Def: %d", atkdef % 16))
                     print(string.format("Spe: %d", math.floor(spespc / 16)))
