@@ -44,11 +44,11 @@ local dv_flag_addr = enemy_addr + 0x21
 local battle_flag_addr = enemy_addr + 0x22
 
 function getUnownForm(atkdef,spespc)
-    spcbits = math.floor(spespc/2) % 4 
-    spebits = math.floor(spespc/32) % 4
-    defbits = math.floor(atkdef/2) % 4
-    atkbits = math.floor(atkdef/32) % 4
-    formid = math.floor((atkbits * 64 + defbits * 16 + spebits * 4 + spcbits) / 10)
+    local spcbits = math.floor(spespc/2) % 4
+    local spebits = math.floor(spespc/32) % 4
+    local defbits = math.floor(atkdef/2) % 4
+    local atkbits = math.floor(atkdef/32) % 4
+    local formid = math.floor((atkbits * 64 + defbits * 16 + spebits * 4 + spcbits) / 10)
     return string.char(formid + 65)
 end
 

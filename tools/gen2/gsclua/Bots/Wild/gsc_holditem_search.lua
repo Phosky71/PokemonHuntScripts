@@ -83,7 +83,8 @@ while true do
             if desired_item_hex == item then
                 print("Desired item found!")
                 return
-            else print("No item/undesired item found.")
+    else
+        print(string.format("No item/undesired item found."))
                 savestate.load(state)
                 emu.frameadvance()
                 break
