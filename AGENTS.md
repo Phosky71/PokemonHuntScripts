@@ -22,3 +22,11 @@ Al inspeccionar archivos o filtrar salidas en Windows, utiliza siempre comandos 
 5. Los ejemplos de código, comandos, rutas y nombres de archivos deben permanecer idénticos entre idiomas.
 6. Los términos técnicos pueden conservarse en inglés cuando su traducción resulte confusa.
 7. Los nombres de herramientas, proyectos y tecnologías nunca deben traducirse.
+
+## 📝 OBLIGACIONES DE MANTENIMIENTO Y DOCUMENTACIÓN
+- **No integrar código sin verificar licencia:** Antes de incluir cualquier script upstream, comprobar la licencia (MIT, GPL-3.0, o ninguna). Si no tiene licencia, documentarlo explícitamente como "unknown" en CREDITS.md.
+- **No eliminar atribuciones upstream:** Cada contribuidor original debe permanecer mencionado en CREDITS.md y en los comentarios del archivo si corresponde.
+- **Documentación individual requerida:** Cada herramienta funcional debe tener una guía propia en `docs/tools/<generation>/`. La guía debe cubrir instalación, uso, parámetros, autoría y limitaciones.
+- **Catálogo JSON obligatorio:** Todas las herramientas deben estar registradas en `catalog/tools/*.json` con campos validados.
+- **Versionado de emuladores:** No afirmar compatibilidad con otros emuladores (mGBA, BizHawk) salvo prueba directa. Mantener VBA-M rr 23.6 como estándar.
+- **Sincronización bilingüe:** Cuando se actualice `docs/tools/genX/<tool>.md`, actualizar también `docs/es/tools/genX/<tool>.md` dentro de la misma sesión de trabajo.

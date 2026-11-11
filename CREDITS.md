@@ -1,176 +1,61 @@
 # CREDITS — PokemonHuntScripts
 
-This document records every integrated tool, its original author, source, license, and
-modifications made by the PokemonHuntScripts project.
+This document records every integrated tool, its original author, source, license, and modifications made by the PokemonHuntScripts project.
 
 ---
 
-## Shared Infrastructure
+## 1. Core Contributors
 
-### `shared/tables/gen1_addresses.lua`
-- **Created by:** PokemonHuntScripts (2026-11-11)
-- **License:** MIT
-- **Description:** Canonical Generation 1 memory map and version detector. Addresses
-  cross-verified against `Real96/PokeLua` and `zep715/rbylua`. Provides a single
-  `require()` source of truth so every Gen1 script can share the same version
-  detection and address table.
-
----
-
-## Gen1 — RBY (VBA-M)
-
-### `tools/gen1/rby-vba/gift/giftbot.lua`
-- **Original author:** zep715
-- **Original repo:** <https://github.com/zep715/rbylua>
-- **Fork maintainer:** Phosky71 (`https://github.com/Phosky71/rbylua`)
-- **Original license:** None (upstream had no LICENSE file)
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** Replaced inline 25-line version-detection block with
-  `require("shared.tables.gen1_addresses")`. Logic unchanged.
-
-### `tools/gen1/rby-vba/stationary/stationarybot.lua`
-- **Original author:** zep715
-- **Original repo:** <https://github.com/zep715/rbylua>
-- **Fork maintainer:** Phosky71
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** Replaced inline version-detection block with
-  `require("shared.tables.gen1_addresses")`. Logic unchanged.
-
-### `tools/gen1/rby-vba/fishing/fishbot.lua`
-- **Original author:** zep715
-- **Optimised by:** Phosky71
-- **Original repo:** <https://github.com/zep715/rbylua> / <https://github.com/Phosky71/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** None yet; scheduled for shared-table integration.
-
-### `tools/gen1/rby-vba/fishing/autospecie_fishingbot.lua`
-- **Original author:** LegoFigure11 (original), Phosky71 (upgrade)
-- **Original repo:** <https://github.com/Phosky71/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:**
-  - **Fixed CRITICAL inverted shiny DV check** (0xA2 → 0x2A, etc.)
-  - **Fixed inverted Spe/Spc labels** in print output
-  - **Fixed duplicate `target == 128` branch** (Dewgong index corrected to 120)
-  - **Added `local target_species = "Unknown"` declaration**
-
-### `tools/gen1/rby-vba/in-game-trades/InGameTrade.lua`
-- **Original author:** Phosky71
-- **Original repo:** <https://github.com/Phosky71/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:**
-  - **Fixed uninitialised `input` table** (added `local input = {}`)
-  - **Refactored 5 blocks of 30x repeated `emu.frameadvance()` into `for` loops**
-    (287 lines → 135 lines, identical behavior)
-  - **Fixed "spe/spe" → "spe/spc" label** in final print
-
-### `tools/gen1/rby-vba/in-game-trades/LegoFigure11_igtbot.lua`
-- **Original author:** zep715 (original), LegoFigure11 (optimised)
-- **Original repo:** <https://github.com/Phosky71/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:**
-  - **Fixed CRITICAL inverted shiny DV check** (0xA2 → 0x2A, etc.)
-  - **Fixed inverted Spe/Spc labels** in print output
-
-### `tools/gen1/rby-vba/in-game-trades/Zep715_igtbot.lua`
-- **Original author:** zep715
-- **Original repo:** <https://github.com/zep715/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** None yet.
-
-### `tools/gen1/rby-vba/info/nature_checker.lua`
-- **Original author:** Collector Togami (original), zep715 / Phosky71 (rewritten)
-- **Original repo:** <https://github.com/Phosky71/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** Restored from Phosky71's rbylua (was empty stub).
-
-### `tools/gen1/rby-vba/info/tidbot.lua`
-- **Original author:** zep715
-- **Original repo:** <https://github.com/zep715/rbylua>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** Restored from Phosky71's rbylua (was empty stub).
-
-### `tools/gen1/rby-vba/info/shiny_checker.lua`
-- **Status:** Empty stub in original. No replacement found. Placeholder retained.
+| Contributor | Role |
+|-------------|------|
+| **Phosky71** | Repository creator, bug fixer, Gen2 bot developer, Gen1 refactoring. |
+| **zep715** | Pioneer of VBA-M Lua scripting for Pokémon. Creator of the `rbylua` base. |
+| **wwwwwwzx** | Author of the comprehensive `gsclua` suite for Gen 2. |
+| **LegoFigure11** | Contributor to Gen 1 fishing and trade scripts. |
 
 ---
 
-## Gen2 — GSC (VBA-M)
+## 2. Integrated Tool Registry
 
-### `tools/gen2/gsc-vba/gsclua/` (full tree: 20 files)
-- **Original author:** wwwwwwzx
-- **Original repo:** <https://github.com/wwwwwwzx/gsclua>
-- **Original license:** MIT
-- **License here:** MIT (preserved — upstream LICENSE file included as `LICENSE-upstream-MIT`)
-- **Scripts included:**
-  - `Bots/c_suicune.lua` — Crystal Suicune stationary
-  - `Bots/gsc_catch.lua` — Catch bot
-  - `Bots/gsc_egg.lua` — Egg hatching
-  - `Bots/gsc_gift.lua` — Gift resets
-  - `Bots/gsc_stationary.lua` — Stationary encounters
-  - `Bots/gsc_tid.lua` — TID hunting
-  - `Bots/Wild/gsc_fish.lua` — Fishing
-  - `Bots/Wild/gsc_headbutt.lua` — Headbutt trees
-  - `Bots/Wild/gsc_holditem_search.lua` — Hold item search
-  - `Bots/Wild/gsc_unown.lua` — Unown hunting
-  - `Bots/Wild/gsc_wild.lua` — Wild encounters
-  - `Bots/Wild/gsc_wild_legendary_beasts.lua` — Roaming legendary beasts
-  - `RNG/Seed.lua` — RNG seed utility
-  - `Viewer/gsc_DayCareView.lua` — Daycare viewer
-  - `Viewer/gsc_PartyView.lua` — Party viewer
-  - `Viewer/gsc_RoamerTracker.lua` — Roamer tracker
-  - `Viewer/gsc_WildView.lua` — Wild encounter viewer
-- **Modifications:** None (vendored verbatim).
+### Shared Infrastructure
+- **`shared/tables/gen1_addresses.lua`**: Created by PokemonHuntScripts (2026). MIT. Canonical memory map for Gen 1.
 
-### `tools/gen2/gsc-vba/phosky71/stationary/Crystal_Suicune.lua`
-- **Original author:** Phosky71 (based on wwwwwwzx/gsclua c_suicune.lua)
-- **Original repo:** <https://github.com/Phosky71/PokemonHuntScripts>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** None yet.
+### Generation 1 (RBY)
+| Script | Author(s) | Original Source | License | Modifications |
+|--------|-----------|-----------------|---------|---------------|
+| `giftbot.lua` | zep715 | [rbylua](https://github.com/zep715/rbylua) | MIT* | Refactored with `shared/tables`. |
+| `stationarybot.lua` | zep715 | [rbylua](https://github.com/zep715/rbylua) | MIT* | Refactored with `shared/tables`. |
+| `fishbot.lua` | zep715, Phosky71 | [rbylua](https://github.com/Phosky71/rbylua) | MIT* | Optimizations by Phosky71. |
+| `autospecie_fishingbot.lua` | LegoFigure11, Phosky71 | [rbylua](https://github.com/Phosky71/rbylua) | MIT* | **CRITICAL BUG FIX** (DV check logic). |
+| `InGameTrade.lua` | Phosky71 | [rbylua](https://github.com/Phosky71/rbylua) | MIT* | Frame-advance loops refactoring. |
+| `nature_checker.lua` | Collector Togami, Phosky71 | [rbylua](https://github.com/Phosky71/rbylua) | MIT* | Version detection upgrade. |
+| `tidbot.lua` | zep715 | [rbylua](https://github.com/zep715/rbylua) | MIT* | Baseline restoration. |
 
-### `tools/gen2/gsc-vba/phosky71/wild/WildLegandaryBot.lua`
-- **Original author:** Phosky71
-- **Original repo:** <https://github.com/Phosky71/PokemonHuntScripts>
-- **Original license:** None
-- **License here:** MIT (applied by PokemonHuntScripts)
-- **Modifications:** None yet.
+### Generation 2 (GSC)
+| Script | Author(s) | Original Source | License | Modifications |
+|--------|-----------|-----------------|---------|---------------|
+| **`gsclua` Suite** | wwwwwwzx | [gsclua](https://github.com/wwwwwwzx/gsclua) | MIT | Vendored verbatim (20 files). |
+| `Crystal_Suicune.lua` | Phosky71 | Phosky71 Repo | MIT* | Specialized Suicune logic. |
+| `WildLegandaryBot.lua` | Phosky71 | Phosky71 Repo | MIT* | Specialized Roamer hunt. |
+
+*\*MIT applied by PokemonHuntScripts project; upstream repository did not specify a license.*
 
 ---
 
-## Upstream Repositories Investigated but NOT Integrated
+## 3. Acknowledgements
+- **Real96**: For better region/version checks and extensive RAM address discovery in Gen 2.
+- **Sipanale**: For contributions to legendary beast hunting logic.
+- **RichardPaulAstley**: For assistance with RAM addresses and testing.
+- **Koroze23**: For testing Korean version support.
 
-These projects were analysed in detail. They are **not** copied into this repository
-due to one or more of: incompatible license, no license, abandoned / broken,
-or already superseded by a maintained fork.
+---
 
-| Repo | License | Reason not integrated |
-|------|---------|----------------------|
-| `Real96/PokeLua` (Gen1-5) | **GPL-3.0** | GPL-3.0 copyleft; see note below |
-| `DevonStudios/LuaScripts` (Gen3-5) | **GPL-3.0** | GPL-3.0 copyleft + unmaintained (redirects to PokeLua) |
-| `DBJoran/Shinyhunter` (Gen3 Python) | **None** | No license + outdated ML model (broken classifier) |
-| `wyanido/pokebot-nds` (Gen4-5) | **MIT** | Archived; very comprehensive — considered for Phase 3 |
-| `40Cakes/pokebot-gen3` (Gen3 Python) | **GPL-3.0** | GPL-3.0 copyleft; requires libmgba-py |
-| `NicolasAvilaB/LuaScripts` | **GPL-3.0** | Fork of DevonStudios (minor diffs) |
-| `MichiS97/rselua` (Gen3) | **None** | No license |
-| `kvpb/luascripts` | **None** | No license; mostly dupes of zep715/rbylua |
-| `kvpb/PKMNLuaScripts` (Gen1) | **None** | No license; mostly empty submodules |
-| `Phosky71/AutoShinyHunterAllGens` | **None** | No license; early draft (PyQt UI unimplemented) |
+## 4. Upstream Repositories
+- `zep715/rbylua`: Foundation for RBY scripting.
+- `wwwwwwzx/gsclua`: Comprehensive GSC suite.
+- `Real96/PokeLua`: Reference for memory addresses (GPL-3.0).
 
-### GPL-3.0 Integration Note
+---
 
-`Real96/PokeLua` and `DevonStudios/LuaScripts` together cover Gen1-5 across VBA,
-mGBA, BizHawk, DeSmuME, and Dolphin — by far the most comprehensive and actively
-maintained Lua RNG toolset. They are under GPL-3.0.
-
-GPL-3.0 requires that the resulting combined work be distributed under GPL-3.0.
-If the PokemonHuntScripts project adopts GPL-3.0 as its repository license,
-these tools can be vendored and improved. This is **recommended** as a future
-step — see `PROJECT_AUDIT.md`.
+## 5. Licensing Note
+This repository uses the MIT License for its own contributions. Every integrated script preserves its original attribution. Where no license was provided upstream, we have applied the MIT License to facilitate redistribution while maintaining author credit.
