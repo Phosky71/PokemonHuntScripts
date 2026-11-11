@@ -1,0 +1,17 @@
+{
+  "tool": "fishbot",
+  "title": "Gen1 Fishing Bot (Manual Species)",
+  "path": "tools/gen1/rby-vba/fishing/fishbot.lua",
+  "generation": 1,
+  "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
+  "platform": "Game Boy (via VBA-M rr 23.6)",
+  "technology": "Lua 5.1 (VBA-M Lua API)",
+  "original_author": "zep715",
+  "optimised_by": "Phosky71",
+  "original_repo": "https://github.com/zep715/rbylua",
+  "license": "MIT (applied by PokemonHuntScripts; upstream had no license)",
+  "method": "Casts, reads biteFlagAddr (0xCD3D), verifies species against user-set target index, then soft-resets to check IVs.",
+  "shiny_criterion": "spespc == 0xAA AND atkdef in {0x2A,0x3A,0x6A,0x7A,0xAA,0xBA,0xEA,0xFA}",
+  "changes_by_pokemonhuntscripts": "None yet; scheduled for shared-table integration.",
+  "status": "verified-memory-addresses"
+}
