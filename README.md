@@ -4,10 +4,13 @@
 > **Original repo:** <https://github.com/Phosky71/PokemonHuntScripts>
 > **This repo:** maintained fork — all original work is preserved and credited.
 
+## Idioma / Language
+- **English** (predeterminado) — this file
+- **Español** — <https://github.com/Phosky71/PokemonHuntScripts/blob/main/docs/es/README.md>
+
 ## What is this?
 
-PokemonHuntScripts is a technical reference and toolkit for automated shiny hunting across Pokémon
-generations. It is **not** a copy-paste dump: every tool included here has been
+PokemonHuntScripts is a technical reference and toolkit for automated shiny hunting across Pokémon generations. It is **not** a copy-paste dump: every tool included here has been
 
 1. Audited for correctness (memory addresses, DV checks, RNG logic).
 2. Checked for license compatibility before integration.
@@ -52,11 +55,8 @@ PokemonHuntScripts/
 
 ## License
 
-This repository is licensed under **MIT**. Individual tools retain their original
-licenses; see `CREDITS.md` and each tool's folder for details. GPL-3.0 tools are
-included under the terms of the GPL-3.0 and remain so.
+This repository is licensed under **MIT**. Individual tools retain their original licenses; see `CREDITS.md` and each tool's folder for details. GPL-3.0 tools are included under the terms of the GPL-3.0 and remain so.
 
 ## Contributing
 
-See `CONTRIBUTING.md`. All commits require a code gate (tests + audit) before
-being accepted.
+See `CONTRIBUTING.md`. All commits require a code gate (tests + audit) before being accepted.

@@ -1,5 +1,9 @@
 # PROJECT_AUDIT.md
 
+## Language / Idioma
+- **English** (default) — this file
+- **Español** — <https://github.com/Phosky71/PokemonHuntScripts/blob/main/docs/es/PROJECT_AUDIT.md>
+
 ## Executive Summary
 
 **PokemonHuntScripts** has been transformed from a disorganized collection of 15+ scattered repositories into a **cohesive, audited, and well-documented reference repository** for automated shiny hunting across Pokémon generations.
@@ -18,6 +22,16 @@
   - `catalog/tools/*.json` — machine-readable tool metadata.
   - `docs/generations/` — per-generation documentation.
 - **Phase E (Documentation):** Added README, LICENSE, CREDITS.md, and comprehensive per-tool documentation.
+- **Phase F (Bilingual Documentation Policy):** Established a rigorous bilingual documentation policy with English as the primary source of truth and Spanish translations under `docs/es/`.
+
+## Bilingual Documentation Policy
+
+PokemonHuntScripts enforces a strict bilingual documentation standard to maintain technical accuracy and global accessibility:
+1. **Primary Language:** English is the official and default language. All new documentation must be written in English first.
+2. **Secondary Language:** Spanish translations are provided under `docs/es/` for all core documents (`README.md`, `PROJECT_AUDIT.md`, `CREDITS.md`, `CONTRIBUTING.md`, `SECURITY.md`).
+3. **Source of Truth:** The English version is always the primary source of truth.
+4. **Parity & Consistency:** Spanish translations must mirror the technical content, structure, and accuracy of the English originals without contradictory information.
+5. **Identifiers & Code:** Code examples, commands, file paths, and tool/project names remain identical across both languages.
 
 ## State Before Integration
 
@@ -60,6 +74,7 @@ PokemonHuntScripts/
 ├── CREDITS.md                     # Full attribution matrix
 ├── PROJECT_AUDIT.md               # This document
 ├── docs/
+│   ├── es/                        # Spanish documentation mirror
 │   ├── architecture/              # Design decisions
 │   ├── generations/               # Per-gen notes
 │   ├── emulators/                 # Compatibility matrix

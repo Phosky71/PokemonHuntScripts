@@ -13,3 +13,12 @@ Al inspeccionar archivos o filtrar salidas en Windows, utiliza siempre comandos 
 - Primeras N líneas: `Get-Content .\archivo -TotalCount N` o `| Select-Object -First N` (PowerShell) / `head -n N archivo` (Git Bash).
 - Últimas N líneas: `Get-Content .\archivo -Tail N` o `| Select-Object -Last N` (PowerShell) / `tail -n N archivo` (Git Bash).
 - Comprobar existencia: `Test-Path .\ruta\archivo` (PowerShell) / `test -f ruta/archivo` (Git Bash).
+
+## 🌐 POLÍTICA DE DOCUMENTACIÓN BILINGÜE
+1. Toda documentación nueva debe redactarse primero en inglés.
+2. Todo documento técnico público debe tener traducción española cuando sea relevante para los usuarios.
+3. Los cambios en un documento inglés deben reflejarse en su traducción española (`docs/es/`).
+4. No se permite que ambas versiones tengan información técnica contradictoria.
+5. Los ejemplos de código, comandos, rutas y nombres de archivos deben permanecer idénticos entre idiomas.
+6. Los términos técnicos pueden conservarse en inglés cuando su traducción resulte confusa.
+7. Los nombres de herramientas, proyectos y tecnologías nunca deben traducirse.
