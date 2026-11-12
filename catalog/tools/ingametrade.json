@@ -1,0 +1,19 @@
+{
+  "id": "gen1-trade-bot",
+  "name": "Gen1 In-Game Trade Shiny Hunter",
+  "generation": 1,
+  "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
+  "method": "In-Game NPC Trade DV Verification",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen1/rby-vba/in-game-trades/InGameTrade.lua",
+  "all_scripts": [
+    "tools/gen1/rby-vba/in-game-trades/InGameTrade.lua",
+    "tools/gen1/rby-vba/in-game-trades/LegoFigure11_igtbot.lua",
+    "tools/gen1/rby-vba/in-game-trades/Zep715_igtbot.lua"
+  ],
+  "doc_path_en": "docs/tools/gen1/in-game-trades.md",
+  "doc_path_es": "docs/es/tools/gen1/in-game-trades.md",
+  "author": "Phosky71, LegoFigure11, zep715",
+  "license": "MIT",
+  "status": "verified-memory-addresses"
+}

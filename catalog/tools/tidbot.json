@@ -1,0 +1,14 @@
+{
+  "id": "gen1-tidbot",
+  "name": "Gen1 Trainer ID Hunter",
+  "generation": 1,
+  "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
+  "method": "TID Hunting via Soft Reset Loop",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen1/rby-vba/info/tidbot.lua",
+  "doc_path_en": "docs/tools/gen1/info-tools.md",
+  "doc_path_es": "docs/es/tools/gen1/info-tools.md",
+  "author": "zep715",
+  "license": "MIT (applied by PokemonHuntScripts; upstream had no license)",
+  "status": "verified-memory-addresses"
+}

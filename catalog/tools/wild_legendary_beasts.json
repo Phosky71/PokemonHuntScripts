@@ -1,0 +1,14 @@
+{
+  "id": "gen2-wild-legendary-beasts",
+  "name": "Gen2 Roaming Legendary Beasts Hunter",
+  "generation": 2,
+  "games": ["Gold", "Silver", "Crystal"],
+  "method": "Roaming Legendary Beasts (Raikou, Entei, Suicune) Hunt and Capture",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen2/gsc-vba/phosky71/wild/WildLegandaryBot.lua",
+  "doc_path_en": "docs/tools/gen2/phosky71.md",
+  "doc_path_es": "docs/es/tools/gen2/phosky71.md",
+  "author": "Phosky71",
+  "license": "MIT (applied by PokemonHuntScripts)",
+  "status": "verified-memory-addresses"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gen2-crystal-suicune",
+  "name": "Crystal Suicune Shiny Hunter (Optimized)",
+  "generation": 2,
+  "games": ["Crystal"],
+  "method": "Special Stationary - Crystal Suicune Encounter",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen2/gsc-vba/phosky71/stationary/Crystal_Suicune.lua",
+  "doc_path_en": "docs/tools/gen2/phosky71.md",
+  "doc_path_es": "docs/es/tools/gen2/phosky71.md",
+  "author": "Phosky71",
+  "license": "MIT (applied by PokemonHuntScripts)",
+  "status": "verified-memory-addresses"
+}

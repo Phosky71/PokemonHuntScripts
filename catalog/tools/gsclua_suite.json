@@ -1,0 +1,33 @@
+{
+  "id": "gen2-gsclua-suite",
+  "name": "Gen2 GSC Lua Suite (gsclua)",
+  "generation": 2,
+  "games": ["Gold", "Silver", "Crystal"],
+  "method": "Comprehensive Shiny Hunting Suite",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen2/gsclua/",
+  "all_scripts": [
+    "tools/gen2/gsclua/Bots/c_suicune.lua",
+    "tools/gen2/gsclua/Bots/gsc_catch.lua",
+    "tools/gen2/gsclua/Bots/gsc_egg.lua",
+    "tools/gen2/gsclua/Bots/gsc_gift.lua",
+    "tools/gen2/gsclua/Bots/gsc_stationary.lua",
+    "tools/gen2/gsclua/Bots/gsc_tid.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_fish.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_headbutt.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_holditem_search.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_unown.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_wild.lua",
+    "tools/gen2/gsclua/Bots/Wild/gsc_wild_legendary_beasts.lua",
+    "tools/gen2/gsclua/RNG/Seed.lua",
+    "tools/gen2/gsclua/Viewer/gsc_DayCareView.lua",
+    "tools/gen2/gsclua/Viewer/gsc_PartyView.lua",
+    "tools/gen2/gsclua/Viewer/gsc_RoamerTracker.lua",
+    "tools/gen2/gsclua/Viewer/gsc_WildView.lua"
+  ],
+  "doc_path_en": "docs/tools/gen2/gsclua.md",
+  "doc_path_es": "docs/es/tools/gen2/gsclua.md",
+  "author": "wwwwwwzx, zep715, Real96, Sipanale",
+  "license": "MIT",
+  "status": "vendored-upstream"
+}

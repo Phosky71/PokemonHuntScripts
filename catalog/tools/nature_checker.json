@@ -1,0 +1,14 @@
+{
+  "id": "gen1-nature-checker",
+  "name": "Gen1 Nature Checker",
+  "generation": 1,
+  "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
+  "method": "Party Member Nature Display (Derived from DVs)",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen1/rby-vba/info/nature_checker.lua",
+  "doc_path_en": "docs/tools/gen1/info-tools.md",
+  "doc_path_es": "docs/es/tools/gen1/info-tools.md",
+  "author": "Collector Togami (original), Phosky71 (rewritten)",
+  "license": "MIT (applied by PokemonHuntScripts)",
+  "status": "verified-memory-addresses"
+}
