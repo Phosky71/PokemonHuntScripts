@@ -1,20 +1,17 @@
 {
-  "tool": "giftbot",
-  "title": "Gen1 Gift / Starter Shiny Hunter",
-  "path": "tools/gen1/rby-vba/gift/giftbot.lua",
+  "id": "gen1-gift-bot",
+  "name": "Gen1 Gift & Starter Shiny Hunter",
   "generation": 1,
   "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
-  "platform": "Game Boy (via VBA-M rr 23.6)",
-  "technology": "Lua 5.1 (VBA-M Lua API)",
-  "original_author": "zep715",
-  "fork_maintainer": "Phosky71",
-  "original_repo": "https://github.com/zep715/rbylua",
-  "license": "MIT (applied by PokemonHuntScripts; upstream had no license)",
-  "method": "Memory-read DV check on party slot byte (base_address + 0x23 + slot * 0x2C) after pressing A over 'no nickname'.",
-  "shiny_criterion": "spespc == 0xAA AND atkdef in {0x2A,0x3A,0x6A,0x7A,0xAA,0xBA,0xEA,0xFA}",
-  "targets": ["Starters (Bulbasaur, Charmander, Squirtle)", "Fossils (Omanyte, Kabuto, Aerodactyl)", "In-game gifts (Eevee, Lapras)", "Game Corner prizes"],
-  "changes_by_pokemonhuntscripts": [
-    "Replaced 25-line inline version-detection block with require('shared.tables.gen1_addresses')."
+  "method": "Gift/Shiny Hunt via Memory Read",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen1/rby-vba/gift/giftbot.lua",
+  "all_scripts": [
+    "tools/gen1/rby-vba/gift/giftbot.lua"
   ],
+  "doc_path_en": "docs/tools/gen1/gift-hunting.md",
+  "doc_path_es": "docs/es/tools/gen1/gift-hunting.md",
+  "author": "zep715, Phosky71",
+  "license": "MIT",
   "status": "verified-memory-addresses"
 }

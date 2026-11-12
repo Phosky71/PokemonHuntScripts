@@ -1,21 +1,17 @@
 {
-  "tool": "stationarybot",
-  "title": "Gen1 Stationary Shiny Hunter",
-  "path": "tools/gen1/rby-vba/stationary/stationarybot.lua",
+  "id": "gen1-stationary-bot",
+  "name": "Gen1 Stationary Shiny Hunter",
   "generation": 1,
   "games": ["Red", "Blue", "Yellow", "Green (JPN)"],
-  "platform": "Game Boy (via VBA-M rr 23.6)",
-  "technology": "Lua 5.1 (VBA-M Lua API)",
-  "original_author": "zep715",
-  "fork_maintainer": "Phosky71",
-  "original_repo": "https://github.com/zep715/rbylua",
-  "license": "MIT (applied by PokemonHuntScripts; upstream had no license)",
-  "method": "Memory-read DV check on the encountered Pokemon's atkdef/spespc bytes after the battle-start flag at 0xC027 reaches 0xF0; soft-reset on non-shiny.",
-  "shiny_criterion": "spespc == 0xAA AND atkdef in {0x2A,0x3A,0x6A,0x7A,0xAA,0xBA,0xEA,0xFA}",
-  "targets": ["Snorlax", "Zapdos", "Articuno", "Moltres", "Mewtwo", "Electrode", "Voltorb"],
-  "changes_by_pokemonhuntscripts": [
-    "Replaced 25-line inline version-detection block with require('shared.tables.gen1_addresses') (single source of truth, cross-verified against Real96/PokeLua).",
-    "Preserved original DV addresses and detection logic exactly."
+  "method": "Stationary Encounter Memory-Read DV Check",
+  "emulator": "VBA-M rr 23.6",
+  "script_path": "tools/gen1/rby-vba/stationary/stationarybot.lua",
+  "all_scripts": [
+    "tools/gen1/rby-vba/stationary/stationarybot.lua"
   ],
+  "doc_path_en": "docs/tools/gen1/stationary-hunting.md",
+  "doc_path_es": "docs/es/tools/gen1/stationary-hunting.md",
+  "author": "zep715, Phosky71",
+  "license": "MIT",
   "status": "verified-memory-addresses"
 }
